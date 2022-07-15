@@ -10,7 +10,7 @@
 
     <form>
         <input type="button" onclick="sayHello()" value="sayHello">
-        <input type="button" onclick='location.reload()'>'
+        <input type="button" onclick='redirect()' value="redirect me">'
     </form>
 
     <script>
@@ -122,6 +122,20 @@
         function sayHello(){
             document.write("Hello user")
         }        
+
+        //================ JS Object ================//
+        var students = {
+            "student1" : "chirag",
+            "student2" : "yug",
+            "student3" : "ravi"
+        }
+        document.write("Student 1 " + students.student1)
+        document.write("Student 2 " + students.student2)
+
+        //=============== window.location =============//
+        function redirect(){
+            window.location = "https://jsfiddle.net/"
+        }
 
     </script>
     
