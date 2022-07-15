@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Concepts</title>
+</head>
+<body>
+
+    <form>
+        <input type="button" onclick="sayHello()" value="sayHello">
+        <input type="button" onclick='location.reload()'>'
+    </form>
+
+    <script>
+
+        //================= JS If Else =====================//
+        var marks1 = parseInt(prompt("Enter marks1","Enter"));
+        var marks2 = parseInt(prompt("Enter marks2","Enter"));
+        var marks3 = parseInt(prompt("Enter marks3","Enter"));
+        var total = marks1 + marks2 + marks3;
+        var percent = total * 100/150;
+        alert(percent)
+
+        if(percent >= 80){alert("grade A");}
+        else if(percent >= 60){alert("grade b");}
+        else if(percent >= 40){alert("grade c");}
+        else{alert("grade d");}
+
+
+
+        //================= JS For loop ==============//
+        var i = 0;
+        for(i=0; i<=50; i+=2){
+          document.write("i = " + i);
+          document.write("<br />");
+        }
+        
+
+
+        //================= JS While loop ==============//
+        //counts number of digits
+        var num = parseInt(prompt("Enter a number","Enter...")) //4567
+        var count = 0;
+        while(num > 0){
+          num = Math.trunc(num/10); //456.7 //45.6 //4.5 //4.0 
+          count++;
+        }
+        alert("The digits in number are: " + count)
+
+
+
+        //================= JS Do While loop ==============//
+        //ATM Security project
+        var actualpin = 4545;
+        var count = 0;
+        var pin;
+        do{
+            pin = prompt("Enter your 4 digit pin","Enter...");
+            count++;
+        }while(pin != actualpin && count<3)
+        if(pin==actualpin){
+            alert("Welcome to account")
+        }
+        else{
+            alert("Account blocked")
+        }
+
+
+
+        //================= JS Switch Case ==============//
+        var ch = prompt("Enter a character: ")
+        switch(ch){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                document.write(ch + " is vowel");
+                break
+            default:
+                document.write(ch + " is special character or constant");
+                break
+        }
+
+
+        //================= JS Arithmatic Operators ==============//
+        var num1 = 30; var num2 = 40;
+        document.write(num1 + num2);
+        document.write("<br/>");
+        document.write(num1 - num2);
+        document.write("<br/>");
+        document.write(num1 * num2);
+        document.write("<br/>");
+        document.write(num1 / num2);
+        document.write("<br/>");
+        document.write(num1 % num2);
+        
+        //================= JS Logical Operators ==============//
+        var uid = "john";
+        var pwd = "123";
+        var message = (uid == "john" && pwd == "123") ? "welcome" : "Invalid user";
+        alert(message)
+
+        //================= JS Comparison Operators ==============//
+        var num1 = 30; var num2 = 40;
+        document.write(num1 == num2);
+        document.write("<br/>");
+        document.write(num1 != num2);
+        document.write("<br/>");
+        document.write(num1 > num2);
+        document.write("<br/>");
+        document.write(num1 < num2);
+        document.write("<br/>");
+        document.write(num1 >= num2);
+        document.write("<br/>");
+        document.write(num1 <= num2);
+
+
+        //================= JS Function ==============//
+        function sayHello(){
+            document.write("Hello user")
+        }        
+
+    </script>
+    
+</body>
+</html>
